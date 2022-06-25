@@ -12,7 +12,7 @@ export default function Contact () {
           <LeftSideBar />
         </div>
         <div className='basis-[70%]' id="mainContentBackground" >
-          <Marquee marqueeText="Contact" />
+          <Marquee marqueeText="Contacto" />
         </div>
         <div className='basis-[15%]'>
           <RightSideBar />
