@@ -28,19 +28,18 @@ export default function Posts ({ allPostsData }) {
         <div className='basis-[70%]' id="mainContentBackground" >
           <Marquee marqueeText="Blog" />
           {/* blog posts section */}
-          <section className="text-white">
-            <h2 className="text-2xl">Blog</h2>
-            <ul>
+          <section className="text-white text-center">
+            <ul className="space-y-10">
               {allPostsData.map(({ id, date, title }) => (
-                <li key={id}>
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                <br />
-                <small>
-                  <Date dateString={date} />
-                </small>
-              </li>
+                <li className="border-red-800 border-2" key={id}>
+                  <Link href={`/posts/${id}`}>
+                    <a className="text-3xl">{title}</a>
+                  </Link>
+                  <br />
+                  <small>
+                    <Date dateString={date} />
+                  </small>
+                </li>
               ))}
             </ul>
           </section>

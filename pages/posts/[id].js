@@ -34,11 +34,8 @@ export default function Post ({ postData }) {
         <div className='basis-[15%]'>
           <LeftSideBar />
         </div>
-        <div className='basis-[70%] text-white' id="mainContentBackground" >
-          <Marquee marqueeText="Titulo del post" />
-          {postData.title}
-          <br />
-          {postData.id}
+        <div className='basis-[70%] text-white text-center' id="mainContentBackground" >
+          <Marquee marqueeText={postData.title} />
           <br />
           <Date dateString={postData.date} />
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
